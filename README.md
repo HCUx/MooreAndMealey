@@ -1,2 +1,2 @@
 # MooreAndMealey
-Moore and Melaey machine for automata teory
+Moore and Melaey machine for automata theory
