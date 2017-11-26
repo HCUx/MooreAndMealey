@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mooremainbaselayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context="hcanu.mymooremachine.Moore.MooreMainActivity">7
+
+    <LinearLayout
+        android:id="@+id/qlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/inputQTextViewS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="Q:{ " />
+
+        <EditText
+            android:id="@+id/inputQEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:ems="10"
+            android:hint="q0,q1,q2...q10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/inputQTextViewE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text=" }" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/slayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/inputSTextViewS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="£={ " />
+
+        <EditText
+            android:id="@+id/inputSEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:ems="10"
+            android:hint="a,b"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/inputSTextViewE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text=" }" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/inputTTextViewS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="Γ={ " />
+
+        <EditText
+            android:id="@+id/inputTEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:ems="10"
+            android:hint="0,1"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/inputTTextViewE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text=" }" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/step1to2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sıradaki Adım ->"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/listheadlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/listqtextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Q" />
+
+        <TextView
+            android:id="@+id/listStextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="S" />
+
+        <TextView
+            android:id="@+id/listTtextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="T" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/step2listlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/qlistview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ListView
+            android:id="@+id/slistview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ListView
+            android:id="@+id/tlistview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/step2btnlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/backstep1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Geri" />
+
+        <Button
+            android:id="@+id/step2to3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Sıradaki Adım >" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollvertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:clipToPadding="false"
+        android:visibility="gone">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:visibility="visible">
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+            </TableLayout>
+        </HorizontalScrollView>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/step3to4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:text="4.Adıma Geç"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/scrollverticalstep4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:clipToPadding="false"
+        android:visibility="gone">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:visibility="visible">
+
+            <TableLayout
+                android:id="@+id/tableLayoutstep4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+            </TableLayout>
+        </HorizontalScrollView>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/step4toEnd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:text="Son Adıma Geç"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/endsteplinearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/endInputTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="Veriyi Girin : " />
+
+        <EditText
+            android:id="@+id/endInputET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/outputStatesLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:padding="10dp"
+            android:text="States :" />
+
+        <TextView
+            android:id="@+id/outputStatesTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/outputLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:padding="10dp"
+            android:text="Output :" />
+
+        <TextView
+            android:id="@+id/outputTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/finishbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tamamla"
+        android:visibility="gone" />
+
+</LinearLayout>

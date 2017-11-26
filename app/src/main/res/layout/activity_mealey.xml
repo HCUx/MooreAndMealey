@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mealeymainbaselayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context="hcanu.mymooremachine.Mealey.MealeyMainActivity">7
+
+    <LinearLayout
+        android:id="@+id/mealeyqlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/mealeyinputQTextViewS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="Q:{ " />
+
+        <EditText
+            android:id="@+id/mealeyinputQEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:ems="10"
+            android:hint="q0,q1,q2...q10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/mealeyinputQTextViewE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text=" }" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mealeyslayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/mealeyinputSTextViewS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="£={ " />
+
+        <EditText
+            android:id="@+id/mealeyinputSEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:ems="10"
+            android:hint="a,b"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/mealeyinputSTextViewE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text=" }" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mealeytlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/mealeyinputTTextViewS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="Γ={ " />
+
+        <EditText
+            android:id="@+id/mealeyinputTEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:ems="10"
+            android:hint="0,1"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/mealeyinputTTextViewE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text=" }" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/mealeystep1to2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sıradaki Adım ->"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/mealeylistheadlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/mealeylistqtextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Q" />
+
+        <TextView
+            android:id="@+id/mealeylistStextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="S" />
+
+        <TextView
+            android:id="@+id/mealeylistTtextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="T" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mealeystep2listlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/mealeyqlistview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ListView
+            android:id="@+id/mealeyslistview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ListView
+            android:id="@+id/mealeytlistview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mealeystep2btnlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/mealeybackstep1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Geri" />
+
+        <Button
+            android:id="@+id/mealeystep2to3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Sıradaki Adım >" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/mealeyscrollvertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:clipToPadding="false"
+        android:visibility="visible">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:visibility="visible">
+
+            <TableLayout
+                android:id="@+id/mealeytableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+            </TableLayout>
+        </HorizontalScrollView>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/mealeystep4toEnd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:text="4.Adıma Geç"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/mealeyendsteplinearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/mealeyendInputTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="Veriyi Girin : " />
+
+        <EditText
+            android:id="@+id/mealeyendInputET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/outputStatesLinearMealey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:padding="10dp"
+            android:text="States :" />
+
+        <TextView
+            android:id="@+id/outputStatesMealeyTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/outputLinearMealey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:padding="10dp"
+            android:text="Output :" />
+
+        <TextView
+            android:id="@+id/outputMealeyTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/mealeyfinishbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tamamla"
+        android:visibility="gone" />
+
+
+</LinearLayout>
